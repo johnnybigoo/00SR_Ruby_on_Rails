@@ -1,0 +1,27 @@
+<!-- app/views/users/index.html.erb -->
+<div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">Users List</h1>
+
+    <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+            <tr>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">First Name</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Last Name</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Phone</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Created At</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+            <% @users.each do |user| %>
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap"><%= user.first_name %></td>
+                <td class="px-6 py-4 whitespace-nowrap"><%= user.last_name %></td>
+                <td class="px-6 py-4 whitespace-nowrap"><%= user.phone %></td>
+                <td class="px-6 py-4 whitespace-nowrap"><%= user.email %></td>
+                <td class="px-6 py-4 whitespace-nowrap"><%= user.attributes_for_storage[:created_at] %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
