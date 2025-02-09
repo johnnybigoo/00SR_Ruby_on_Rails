@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root "home#index"
   get "home", to: "home#index"
-  get "register", to: "users#new"  # Link for the registration form
+  get "users/register", to: "users#new"  # Link for the registration form
 
   resources :users, only: [:new, :create, :index]
 

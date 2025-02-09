@@ -1,53 +1,47 @@
 <div class="min-h-screen bg-gray-100">
-    <!-- Navigation Bar -->
-    <nav class="bg-white shadow">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Hamburger Menu and Logo -->
-                <div class="flex items-center">
-                    <button class="mr-4 block md:hidden" id="menu-btn">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                    <a href="/" class="flex items-center">
-                        <img class="h-8 w-8 mr-2" src="/assets/logo.png" alt="Logo">
-                        <span class="font-bold text-xl text-gray-800">MaxCRM</span>
-                    </a>
+    <!-- Banner -->
+    <div class="bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <p class="text-sm"><%= @current_date %></p>
+                    <h1 class="text-xl font-semibold"><%= @greeting %>, <%= @user_name %></h1>
                 </div>
-                <!-- Navigation Links for Desktop -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="<%= register_path %>" class="py-2 px-3 text-gray-700 hover:text-gray-900">Register a Lead</a>
-                    <a href="<%= dashboard_path %>" class="py-2 px-3 text-gray-700 hover:text-gray-900">Consult Leads</a>
+                <div class="hidden md:block">
+                    <div class="h-16 w-32 bg-white/10 rounded-lg"></div>
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div class="hidden mobile-menu px-4 pb-4">
-            <a href="<%= register_path %>" class="block py-2 text-sm text-gray-700 hover:bg-gray-200 rounded">Register a Lead</a>
-            <a href="<%= dashboard_path %>" class="block py-2 text-sm text-gray-700 hover:bg-gray-200 rounded">Consult Leads</a>
-        </div>
-    </nav>
+    </div>
 
-    <!-- Header Section -->
-    <header class="bg-white">
-        <div class="max-w-7xl mx-auto py-6 px-4">
-            <h1 class="text-3xl font-bold text-gray-900">Welcome to MaxCRM</h1>
-            <p class="mt-2 text-gray-600">Your native web application without a database</p>
-        </div>
-    </header>
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Quick Links Section -->
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6">
+                <h2 class="text-lg font-medium text-gray-900 mb-4">Quick Links</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <%= link_to users_register_path, class: "flex items-center p-4 bg-white border rounded-lg shadow-sm hover:bg-gray-50" do %>
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-user-plus text-blue-500 text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-900">Create a Lead</p>
+                        <p class="text-sm text-gray-500">Register new potential customers</p>
+                    </div>
+                    <% end %>
 
-    <!-- Main Content (if any) -->
-    <main class="max-w-7xl mx-auto p-4">
-        <!-- Additional content can be added here -->
-    </main>
+                    <%= link_to dashboard_path, class: "flex items-center p-4 bg-white border rounded-lg shadow-sm hover:bg-gray-50" do %>
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-table text-blue-500 text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-900">Consult Leads</p>
+                        <p class="text-sm text-gray-500">View and manage existing leads</p>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<script>
-    // Toggle mobile menu
-    const btn = document.getElementById('menu-btn');
-    const menu = document.querySelector('.mobile-menu');
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
-</script>

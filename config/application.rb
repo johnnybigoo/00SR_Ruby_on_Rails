@@ -35,5 +35,7 @@ module FillFormApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # Set the default timezone for the application
+    config.time_zone = 'Eastern Time (US & Canada)'
   end
 end
