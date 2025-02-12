@@ -13,7 +13,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
     get new_user_url
     assert_response :success
-    assert_select "h1", "Register New User"
+    assert_select "h1", "Register A New Lead"
   end
 
   test "should create user" do
