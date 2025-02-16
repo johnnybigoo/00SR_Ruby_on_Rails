@@ -8,10 +8,15 @@ This data can be seen at another page called consult Leads and also be downloade
 
 The project uses Ruby on Rails with Tailwind for frontend.
 >Ruby version: 3.1.6
+>
 >Rails version: 7.1.5
+>
 >Gems:
+>
 >tailwindcss-rails
+>
 >bootsnap
+>
 >importmap-rails
 
 **Configuration**
