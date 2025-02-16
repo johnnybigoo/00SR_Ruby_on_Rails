@@ -2,9 +2,7 @@
 
 00SR - Develop Native Application Without A Database
 
-In this project I have created an interaction by a pretended CRM web app, where we can fill a Lead form. This app must not use databases as part of the competency tasks. For this I used a json file to store the data inserted.
-
-This data can be seen at another page called consult Leads and also be downloaded as a .csv file.
+In this project, I developed a simulated Customer Relationship Management (CRM) web application designed specifically for a competency task that prohibits the use of a traditional database. The application allows users to complete a lead submission form, saving the input data directly into a JSON file for persistent storage. Users can then access a dedicated "Consult Leads" page to review their entries and even download the data as a CSV file. This solution demonstrates an effective approach to native application development by leveraging file-based data management, robust input validation, and dynamic data export capabilities without relying on a conventional database system.
 
 The project uses Ruby on Rails with Tailwind for frontend.
 >Ruby version: 3.1.6
@@ -23,3 +21,6 @@ The project uses Ruby on Rails with Tailwind for frontend.
 Since there’s no database, we will create a plain Ruby model using ActiveModel and handle JSON file storage.
 
 **How to run the test suite**
+To perform the tests, clone or fork the project and run the command:
+
+>rails test
