@@ -1,24 +1,20 @@
-# README
+# Fill Form App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+00SR - Develop Native Application Without A Database
 
-Things you may want to cover:
+In this project I have created an interaction by a pretended CRM web app, where we can fill a Lead form. This app must not use databases as part of the competency tasks. For this I used a json file to store the data inserted.
 
-* Ruby version
+This data can be seen at another page called consult Leads and also be downloaded as a .csv file.
 
-* System dependencies
+The project uses Ruby on Rails with Tailwind for frontend.
+>Ruby version: 3.1.6
+>Rails version: 7.1.5
+>Gems:
+>tailwindcss-rails
+>bootsnap
+>importmap-rails
 
-* Configuration
+**Configuration**
+Since there’s no database, we will create a plain Ruby model using ActiveModel and handle JSON file storage.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**How to run the test suite**
